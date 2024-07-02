@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+        }
+        
+        button {
+            background-color: hotpink;
+        }
+        
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="find()">Find</button>
+    </div>
+    <p></p>
+    <script>
+        const harveySpecterQuotes = [
+            "I don't have dreams; I have goals.",
+            "Winners don't make excuses when the other side plays the game.",
+            "I refuse to answer that on the grounds that I don't want to.",
+            "Sometimes good guys gotta do bad things to make the bad guys pay.",
+            "Anyone can do my job, but no one can be me.",
+            "I don't play the odds; I play the man.",
+            "I'm against having emotions, not against using them.",
+            "It's not bragging if it is true."
+        ];
+
+        find = () => {
+            const a = harveySpecterQuotes[Math.floor(Math.random() * harveySpecterQuotes.length)];
+            document.getElementsByTagName('p')[0].innerText = a;
+        };
+    </script>
+</body>
+
+</html>
